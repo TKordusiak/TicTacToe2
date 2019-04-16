@@ -1,0 +1,18 @@
+package game;
+
+public class TicTak {
+
+	public static void main(String[] args) {
+		
+		char tab[][] = {{'.','.','.'},
+				{'.','.','.'},
+				{'.','.','.'}};
+		
+		System.out.println();
+		System.out.println("\t1\t2\t3");
+		System.out.print("A    "+tab[0][0]);
+		
+
+	}
+
+}
