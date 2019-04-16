@@ -37,7 +37,7 @@ public class TicTak {
 
 private static boolean checkCrossLeft(char[][] tab2, char player2) {
 
-	if((tab[0][2] == tab[1][1] && tab[1][1] == tab[2][0])) {
+	if((tab[0][2] == tab[1][1] && tab[2][0] !='.')) {
 		System.out.println("Wygra³ gracz " + player);
 	}
 		return true;

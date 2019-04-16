@@ -37,7 +37,7 @@ public class TicTak {
 
 private static boolean checkCrossLeft(char[][] tab2, char player2) {
 
-	if((tab[0][2] == tab[1][1] && tab[1][1] == tab[2][0])) {
+	if((tab[0][2] == tab[1][1] && tab[2][0] !='.')) {
 		System.out.println("Wygra³ gracz " + player);
 	}
 		return true;
@@ -93,8 +93,8 @@ private static boolean checkLinie(char[][] board, char player) {
 		System.out.println("Podaj wspó³rzêdne np. A1");
 		while(!player) {
 			String value = sc.next().toUpperCase();
-			if(value.length() !=2) {
-				System.out.println("Niepoprawna wspó³rzêdna pierwsza");
+			if(value.length() !=3) {
+				System.out.println("Niepoprawna wspó³rzêdna");
 			}else if(value.charAt(0) != 'A' &&
 					 value.charAt(0) != 'B' &&
 					 value.charAt(0) != 'C') {
