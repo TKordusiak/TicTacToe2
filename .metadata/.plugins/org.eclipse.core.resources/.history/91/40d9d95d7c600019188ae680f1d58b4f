@@ -16,7 +16,6 @@ public class TicTak {
 		System.out.println("Rozpoczynamy grê");
 		while(true) {
 			TicTak.printTab();
-			System.out.println();
 			swap();
 //			if(move) {
 //				boolean winLine = checkLinie(tab, player);
@@ -92,7 +91,7 @@ public class TicTak {
 	private static boolean swap() {
 		boolean player = false;
 		System.out.println("Podaj wspó³rzêdne np. A1");
-		while(!player) {
+		while(player) {
 			String value = sc.next().toUpperCase();
 			if(value.length() !=2) {
 				System.out.println("Niepoprawna wspó³rzêdna pierwsza");

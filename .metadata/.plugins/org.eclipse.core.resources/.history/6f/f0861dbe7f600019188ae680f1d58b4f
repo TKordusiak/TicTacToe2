@@ -121,12 +121,15 @@ public class TicTak {
 				}else  {
 					b = 2;
 				}
-				if (tab[a][b] != '.') {
-					System.out.println("To pole jest ju¿ zajête");
-					} else {
-					tab[a][b] = 'X';
-						player = true;
-					}
+				while(player) {
+					if (tab[a][b] != '.') {
+						System.out.println("To pole jest ju¿ zajête");
+						} else {
+						tab[a][b] = 'X';
+							player = true;
+						}
+				}
+				
 			}
 		}
 		return player;

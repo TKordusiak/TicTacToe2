@@ -16,8 +16,11 @@ public class TicTak {
 		System.out.println("Rozpoczynamy grê");
 		while(true) {
 			TicTak.printTab();
-			System.out.println();
-			swap();
+			String player = swap();
+			switch(player) {
+			
+			}
+//			swap();
 //			if(move) {
 //				boolean winLine = checkLinie(tab, player);
 //				boolean winColumn = checkColumn(tab, player);

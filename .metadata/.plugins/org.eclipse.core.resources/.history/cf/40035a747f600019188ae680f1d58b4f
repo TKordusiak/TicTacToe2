@@ -8,7 +8,7 @@ public class TicTak {
 								   {'.','.','.'},
 								   {'.','.','.'}};
 	private static Scanner sc = new Scanner(System.in);
-	private static char player ='X';
+//	private static char player ='X';
 	
 	public static void main(String[] args) {
 		
@@ -18,6 +18,13 @@ public class TicTak {
 			TicTak.printTab();
 			System.out.println();
 			swap();
+			while(swap()) {
+				int b = 0;
+				int a = 0;
+				if (tab[a][b] != '.') {
+					System.out.println("To pole jest ju¿ zajête");
+				
+			}
 //			if(move) {
 //				boolean winLine = checkLinie(tab, player);
 //				boolean winColumn = checkColumn(tab, player);
@@ -33,6 +40,7 @@ public class TicTak {
 //		}else {
 //			move = 'X';
 //		}
+	}
 	}
 }
 
@@ -121,12 +129,16 @@ public class TicTak {
 				}else  {
 					b = 2;
 				}
-				if (tab[a][b] != '.') {
-					System.out.println("To pole jest ju¿ zajête");
-					} else {
-					tab[a][b] = 'X';
-						player = true;
-					}
+				return true; 
+//				while(player) {
+//					if (tab[a][b] != '.') {
+//						System.out.println("To pole jest ju¿ zajête");
+//						} else {
+//						tab[a][b] = 'X';
+//							player = true;
+//						}
+//				}
+				
 			}
 		}
 		return player;

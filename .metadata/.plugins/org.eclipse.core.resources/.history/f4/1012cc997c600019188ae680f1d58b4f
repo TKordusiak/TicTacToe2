@@ -16,7 +16,6 @@ public class TicTak {
 		System.out.println("Rozpoczynamy grê");
 		while(true) {
 			TicTak.printTab();
-			System.out.println();
 			swap();
 //			if(move) {
 //				boolean winLine = checkLinie(tab, player);

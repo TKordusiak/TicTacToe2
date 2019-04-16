@@ -16,19 +16,18 @@ public class TicTak {
 		System.out.println("Rozpoczynamy grê");
 		while(true) {
 			TicTak.printTab();
-			System.out.println();
-			swap();
+			boolean move = swap();
 //			if(move) {
 //				boolean winLine = checkLinie(tab, player);
 //				boolean winColumn = checkColumn(tab, player);
 //				boolean crossRight = checkCrossRight(tab, player);;
-//				boolean crossLeft = checkCrossLeft(tab, player);;
+////				boolean crossLeft = checkCrossLeft(tab, player);;
 //				if(winLine || winColumn || crossRight ) {
 //					System.out.println("Wygra³ gracz " + player);
 //					break;
 //				}
 //			}
-//		if(sawp = 'X') {
+//		if(move = 'X') {
 //			move = 'O';
 //		}else {
 //			move = 'X';
@@ -36,57 +35,57 @@ public class TicTak {
 	}
 }
 
-//private static boolean checkCrossLeft(char[][] tab2, char player2) {
-//
-//	if((tab[0][2] == tab[1][1] && tab[1][1] == tab[2][0])) {
-//		System.out.println("Wygra³ gracz " + player);
-//	}
-//		return true;
-//	}
-//
-//private static boolean checkCrossRight(char[][] board, char player) {
-//	int size = board.length;
-//	for(int i=0; i<size; i++) {
-//		if(board[i][i] != player) {
-//			return false;
-//		}
-//	}
-//	return true;
-//}
-//
-//private static boolean checkColumn(char[][] board, char player) {
-//	int size = board.length;
-//	for(int column = 0; column<size; column++) {
-//		boolean win = true;
-//		for(int line = 0; line<size; line++) {
-//			if(board[line][column] != player) {
-//				win = false;
-//				break;
-//			}
-//		}
-//		if(win) {
-//			return true;
-//		}
-//	}
-//	return false;
-//}
-//
-//private static boolean checkLinie(char[][] board, char player) {
-//	int size = board.length;
-//	for(int line = 0; line<size; line++) {
-//		boolean win = true;
-//		for(int column = 0; column<size; column++) {
-//			if(board[line][column] != player) {
-//				win = false;
-//				break;
-//			}
-//		}
-//		if(win) {
-//			return true;
-//		}
-//	}
-//	return false;
-//}
+private static boolean checkCrossLeft(char[][] tab2, char player2) {
+
+	if((tab[0][2] == tab[1][1] && tab[1][1] == tab[2][0])) {
+		System.out.println("Wygra³ gracz " + player);
+	}
+		return true;
+	}
+
+private static boolean checkCrossRight(char[][] board, char player) {
+	int size = board.length;
+	for(int i=0; i<size; i++) {
+		if(board[i][i] != player) {
+			return false;
+		}
+	}
+	return true;
+}
+
+private static boolean checkColumn(char[][] board, char player) {
+	int size = board.length;
+	for(int column = 0; column<size; column++) {
+		boolean win = true;
+		for(int line = 0; line<size; line++) {
+			if(board[line][column] != player) {
+				win = false;
+				break;
+			}
+		}
+		if(win) {
+			return true;
+		}
+	}
+	return false;
+}
+
+private static boolean checkLinie(char[][] board, char player) {
+	int size = board.length;
+	for(int line = 0; line<size; line++) {
+		boolean win = true;
+		for(int column = 0; column<size; column++) {
+			if(board[line][column] != player) {
+				win = false;
+				break;
+			}
+		}
+		if(win) {
+			return true;
+		}
+	}
+	return false;
+}
 			
 
 	private static boolean swap() {
@@ -107,16 +106,16 @@ public class TicTak {
 			}else {
 				int a;
 				int b ;
-				if(value.charAt(0) == 'A') {
+				if(value.charAt(0) == 'a') {
 					a = 0;
-				}else if(value.charAt(0) == 'B') {
+				}else if(value.charAt(0) == 'b') {
 					a = 1;
 				}else {
 					a = 2;
 				}
-				if(value.charAt(1) == '1') {
+				if(value.charAt(1) == 1) {
 					b = 0;
-				}else if(value.charAt(1) == '2') {
+				}else if(value.charAt(1) == 2) {
 					b = 1;
 				}else  {
 					b = 2;
@@ -129,7 +128,7 @@ public class TicTak {
 					}
 			}
 		}
-		return player;
+			return true;
 		
 	}
 
