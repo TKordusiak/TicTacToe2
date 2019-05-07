@@ -27,8 +27,6 @@ public class TicTak {
 					TicTak.printTab();
 					System.out.println("Wygra³ gracz " + player);
 					break;
-				}else {
-					System.out.println("Remis");
 				}
 				changePlayer();
 			}
