@@ -34,42 +34,20 @@ public class TicTak {
 	}
 	
 	
-	private static boolean checkCrossLeft(char[][] tab, char player) {
-		if((tab[0][2] == tab[1][1] && tab[1][1] == tab[2][0] && tab[2][0]!= '.') ||
-		   (tab[2][0] == tab[1][1] && tab[1][1] == tab[0][2] && tab[0][2] !='.')) {
-			System.out.println("Wygra³ gracz " + player);
-			TicTak.printTab();
-
-	}
+	private static boolean checkCrossLeft(char[][] tab2, char player2) {
+		// TODO Auto-generated method stub
 		return false;
 	}
 
 
-	private static boolean checkCrossRight(char[][] tab, char player) {
-		int size = tab.length;
-		for(int i=0; i<size; i++) {
-			if(tab[i][i] != player) {
-				return false;
-			}
-		}
-		return true;
+	private static boolean checkCrossRight(char[][] tab2, char player2) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 
-	private static boolean checkColumn(char[][] tab, char player) {
-		int size = tab.length;
-		for(int column = 0; column<size; column++) {
-			boolean win = true;
-			for(int line = 0; line<size; line++) {
-				if(tab[line][column] != player) {
-					win = false;
-					break;
-				}
-			}
-			if(win) {
-				return true;
-			}
-		}
+	private static boolean checkColumn(char[][] tab2, char player2) {
+		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -135,7 +113,7 @@ public class TicTak {
 				if (tab[a][b] != '.') {
 					System.out.println("To pole jest ju¿ zajête");
 					} else  {
-					tab[a][b] = TicTak.player; 
+					tab[a][b] = TicTak.player; //changePlayer();
 						player = true;
 					}
 			}

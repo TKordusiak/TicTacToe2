@@ -8,7 +8,7 @@ public class TicTak {
 								   {'.','.','.'},
 								   {'.','.','.'}};
 	private static Scanner sc = new Scanner(System.in);
-	private static char player ='X';
+//	private static char player ='X';
 	
 	public static void main(String[] args) {
 		
@@ -19,83 +19,18 @@ public class TicTak {
 			System.out.println();
 			boolean move = swap();
 			if(move) {
-				boolean winLine = checkLinie(tab, player);
-				boolean winColumn = checkColumn(tab, player);
-				boolean crossRight = checkCrossRight(tab, player);;
-				boolean crossLeft = checkCrossLeft(tab, player);;
-				if(winLine || winColumn || crossRight) {
-					TicTak.printTab();
-					System.out.println("Wygra³ gracz " + player);
-					break;
-				}
 				changePlayer();
-			}
-		}
 	}
-	
-	
-	private static boolean checkCrossLeft(char[][] tab, char player) {
-		if((tab[0][2] == tab[1][1] && tab[1][1] == tab[2][0] && tab[2][0]!= '.') ||
-		   (tab[2][0] == tab[1][1] && tab[1][1] == tab[0][2] && tab[0][2] !='.')) {
-			System.out.println("Wygra³ gracz " + player);
-			TicTak.printTab();
-
+}
 	}
-		return false;
-	}
-
-
-	private static boolean checkCrossRight(char[][] tab, char player) {
-		int size = tab.length;
-		for(int i=0; i<size; i++) {
-			if(tab[i][i] != player) {
-				return false;
-			}
-		}
-		return true;
-	}
-
-
-	private static boolean checkColumn(char[][] tab, char player) {
-		int size = tab.length;
-		for(int column = 0; column<size; column++) {
-			boolean win = true;
-			for(int line = 0; line<size; line++) {
-				if(tab[line][column] != player) {
-					win = false;
-					break;
-				}
-			}
-			if(win) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-
-	private static boolean checkLinie(char[][] tab, char player) {
-		int size = tab.length;
-		for(int line = 0; line<size; line++) {
-			boolean win = true;
-			for(int column = 0; column<size; column++) {
-				if(tab[line][column] != player) {
-					win = false;
-					break;
-				}
-			}
-			if(win) {
-				return true;
-			}
-		}
-		return false;
-	}
-	private static void changePlayer(){
-		if(player == 'O') {
-				player = 'X';
+	private static char changePlayer(){
+		char player = 'X';
+		if(player == 'X') {
+				player = 'O';
 			}else {
 				player = 'O';
 			}
+		return player;
 	}
 
 			
@@ -135,7 +70,7 @@ public class TicTak {
 				if (tab[a][b] != '.') {
 					System.out.println("To pole jest ju¿ zajête");
 					} else  {
-					tab[a][b] = TicTak.player; 
+					tab[a][b] = changePlayer();
 						player = true;
 					}
 			}
